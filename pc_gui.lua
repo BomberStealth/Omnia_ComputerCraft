@@ -578,7 +578,7 @@ local function init()
     end
 
     addLog("System initialized", "info")
-    addLog("Modem ready on " .. modemSide, "success")
+    addLog("Modem ready", "success")
     addLog("Press P to ping turtle", "info")
 
     return true
