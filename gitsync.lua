@@ -3,11 +3,22 @@
 -- ============================================
 local REPO = "BomberStealth/Omnia_ComputerCraft"
 local BRANCH = "main"
-local TOKEN = "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"
+
+-- Carica token da file separato (non pushato!)
+local TOKEN = ""
+if fs.exists("secrets.lua") then
+    local secrets = dofile("secrets.lua")
+    TOKEN = secrets.token or ""
+else
+    print("ERRORE: Crea il file secrets.lua con il token!")
+    print('Esempio: return { token = "ghp_xxx" }')
+    return
+end
 
 local RAW_URL = "https://raw.githubusercontent.com/" .. REPO .. "/" .. BRANCH .. "/"
 local API_URL = "https://api.github.com/repos/" .. REPO .. "/contents/"
 
+-- NOTA: secrets.lua NON è in questa lista!
 local FILES = {
     "config.lua",
     "turtle_main.lua",
