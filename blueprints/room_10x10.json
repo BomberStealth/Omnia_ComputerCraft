@@ -1,0 +1,29 @@
+{
+    "name": "Room 10x10",
+    "version": "1.0",
+    "type": "room",
+    "description": "Standard 10x10 room for machinery",
+    "dimensions": {
+        "width": 10,
+        "depth": 10,
+        "height": 5
+    },
+    "internal": {
+        "width": 10,
+        "depth": 10
+    },
+    "materials": {
+        "wall": "minecraft:stone_bricks",
+        "floor": "minecraft:polished_deepslate",
+        "ceiling": "minecraft:glass",
+        "door": "minecraft:iron_door"
+    },
+    "doors": [
+        {"side": "north", "position": "center", "size": 2}
+    ],
+    "features": {
+        "lighting": true,
+        "lighting_type": "glowstone",
+        "lighting_interval": 4
+    }
+}
